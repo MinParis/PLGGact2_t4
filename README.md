@@ -35,7 +35,7 @@ Comprender el patrón MVC en Spring Boot usando Thymeleaf para renderizar vistas
 
 Se muestra la lista de productos utilizando Thymeleaf y la directiva `th:each`.
 
-![Listado](Capturas\Captura de pantalla 2026-07-17 091537.png)
+![Listado] Capturas\Captura de pantalla 2026-07-17 091537.png
 
 ---
 
