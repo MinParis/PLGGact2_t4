@@ -33,27 +33,27 @@ Comprender el patrón MVC en Spring Boot usando Thymeleaf para renderizar vistas
 
 ## Listado de productos
 
-![Listado](capturas/listado.png)
+![Listado](Capturas/Listado.png)
 
 ## Formulario
 
-![Formulario](capturas/formulario.png)
+![Formulario](Capturas/Formulario.png)
 
 ## Resultado del formulario
 
-![Resultado](capturas/resultado.png)
+![Resultado](Capturas/Resultado.png)
 
 ## Endpoint con @RequestParam
 
-![RequestParam](capturas/requestparam.png)
+![RequestParam](Capturas/requestparam.png)
 
 ## Endpoint con @PathVariable
 
-![PathVariable](capturas/pathvariable.png)
+![PathVariable](Capturas/pathvariable.png)
 
-## Uso de @Value
+## Prueba en Postman
 
-![Value](capturas/value.png)
+![Postman](Capturas/Postam.png)
 
 ## Prueba en Postman
 
