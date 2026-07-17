@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de producto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex justify-center items-start pt-16 px-4">
+
+<div class="bg-white rounded-2xl shadow-md p-8 max-w-md w-full">
+    <h1 class="text-xl font-bold text-indigo-600">Detalle del producto</h1>
+    <p class="text-xs text-slate-400 mb-6" th:text="${nombreProyecto}"></p>
+
+    <div th:if="${producto != null}">
+        <div class="flex justify-between py-3 border-b border-slate-100">
+            <span class="text-xs uppercase tracking-wide text-slate-400">ID</span>
+            <span class="font-semibold" th:text="${producto.id}"></span>
+        </div>
+        <div class="flex justify-between py-3 border-b border-slate-100">
+            <span class="text-xs uppercase tracking-wide text-slate-400">Nombre</span>
+            <span class="font-semibold" th:text="${producto.nombre}"></span>
+        </div>
+        <div class="flex justify-between py-3 border-b border-slate-100">
+            <span class="text-xs uppercase tracking-wide text-slate-400">Categoría</span>
+            <span class="font-semibold" th:text="${producto.categoria}"></span>
+        </div>
+        <div class="flex justify-between py-3">
+            <span class="text-xs uppercase tracking-wide text-slate-400">Precio</span>
+            <span class="font-semibold text-emerald-600" th:text="'$' + ${producto.precio}"></span>
+        </div>
+    </div>
+
+    <div th:if="${producto == null}"
+         class="bg-amber-100 text-amber-700 px-4 py-3 rounded-lg text-sm">
+        No se encontró un producto con ese ID.
+    </div>
+
+    <a th:href="@{/productos}"
+       class="inline-block mt-6 bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-5 py-2.5 rounded-md transition">
+        ← Volver a la lista
+    </a>
+</div>
+</body>
+</html>

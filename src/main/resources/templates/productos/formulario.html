@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo producto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen flex justify-center items-start pt-16 px-4">
+
+<div class="bg-white rounded-2xl shadow-md p-8 max-w-md w-full">
+    <h1 class="text-xl font-bold text-indigo-600">Registrar nuevo producto</h1>
+    <p class="text-xs text-slate-400 mb-6" th:text="${nombreProyecto}"></p>
+
+    <form th:action="@{/productos/nuevo}" th:object="${productoDTO}" method="post" class="space-y-5">
+        <div>
+            <label class="block text-xs uppercase tracking-wide text-slate-400 mb-1">Nombre</label>
+            <input type="text" th:field="*{nombre}" placeholder="Ej: Teclado mecánico"
+                   class="w-full border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+        </div>
+
+        <div>
+            <label class="block text-xs uppercase tracking-wide text-slate-400 mb-1">Categoría</label>
+            <input type="text" th:field="*{categoria}" placeholder="Ej: Electronica"
+                   class="w-full border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+        </div>
+
+        <div>
+            <label class="block text-xs uppercase tracking-wide text-slate-400 mb-1">Precio</label>
+            <input type="number" step="0.01" th:field="*{precio}" placeholder="Ej: 890.50"
+                   class="w-full border border-slate-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+        </div>
+
+        <button type="submit"
+                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2.5 rounded-md transition">
+            Guardar producto
+        </button>
+    </form>
+
+    <a th:href="@{/productos}" class="inline-block mt-5 text-indigo-600 hover:underline text-sm">
+        ← Volver a la lista
+    </a>
+</div>
+</body>
+</html>
