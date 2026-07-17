@@ -31,102 +31,33 @@ Comprender el patrón MVC en Spring Boot usando Thymeleaf para renderizar vistas
 
 ## Capturas de pantalla
 
-### 1. Listado de productos (th:each)
+## Listado de productos
 
-Se muestra la lista de productos utilizando Thymeleaf y la directiva `th:each`.
+![Listado](capturas/listado.png)
 
-![Listado] Capturas\Captura de pantalla 2026-07-17 091537.png
-
----
-
-### 2. Formulario (@ModelAttribute)
-
-Formulario para capturar la información de un producto utilizando `@ModelAttribute`.
+## Formulario
 
 ![Formulario](capturas/formulario.png)
 
----
-
-### 3. Resultado del formulario
-
-Resultado después de enviar el formulario mostrando los datos capturados.
+## Resultado del formulario
 
 ![Resultado](capturas/resultado.png)
 
----
-
-### 4. Endpoint con @RequestParam
-
-Ejemplo de filtrado por categoría.
-
-URL utilizada:
-
-```text
-http://localhost:8080/productos/buscar?categoria=Tecnología
-```
+## Endpoint con @RequestParam
 
 ![RequestParam](capturas/requestparam.png)
 
----
-
-### 5. Endpoint con @PathVariable
-
-Consulta del detalle de un producto mediante su identificador.
-
-URL utilizada:
-
-```text
-http://localhost:8080/productos/0
-```
+## Endpoint con @PathVariable
 
 ![PathVariable](capturas/pathvariable.png)
 
----
-
-### 6. Lectura de propiedades con @Value
-
-Visualización del nombre del proyecto y del autor obtenidos desde `application.properties`.
+## Uso de @Value
 
 ![Value](capturas/value.png)
 
----
-
-### 7. Prueba del endpoint POST en Postman
-
-Petición realizada desde Postman.
-
-**URL**
-
-```text
-POST http://localhost:8080/api/productos
-```
-
-**Body**
-
-```json
-{
-    "nombre":"Monitor",
-    "categoria":"Tecnología",
-    "precio":4500
-}
-```
-
-**Respuesta**
-
-```json
-{
-    "nombre":"Monitor",
-    "categoria":"Tecnología",
-    "precio":4500
-}
-```
+## Prueba en Postman
 
 ![Postman](capturas/postman.png)
-
----
-
-## Autor
+## Alumna
 
 **Paris Lizette Gómez García**
-
-Ingeniería en Sistemas Computacionales
